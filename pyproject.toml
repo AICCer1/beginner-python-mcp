@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beginner-python-mcp"
+version = "0.1.0"
+description = "A beginner-friendly Python MCP server that can be used by AI agents locally."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=1.9.0"
+]
+authors = [
+  { name = "OpenClaw Assistant" }
+]
+
+[project.scripts]
+beginner-python-mcp = "beginner_python_mcp.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
